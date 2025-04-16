@@ -6,13 +6,18 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size // Import NUEVO para ComponenteIconoSimple
+import androidx.compose.material.icons.Icons // Import NUEVO para ComponenteIconoSimple
+import androidx.compose.material.icons.filled.Favorite // Import NUEVO para ComponenteIconoSimple
+import androidx.compose.material3.Icon // Import NUEVO para ComponenteIconoSimple
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text // Import existente
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color // Import NUEVO para ComponenteTextoSimple
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp // Import NUEVO para ComponenteTextoSimple
+import androidx.compose.ui.unit.dp // Import NUEVO para ComponenteIconoSimple
+import androidx.compose.ui.unit.sp
 import com.example.lab04.ui.theme.Lab04Theme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +31,7 @@ class MainActivity : ComponentActivity() {
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
-                    // No llamamos a ComponenteTextoSimple aquí todavía
+                    // No llamamos a los nuevos componentes aquí todavía
                 }
             }
         }
@@ -49,13 +54,13 @@ fun GreetingPreview() {
     }
 }
 
-// --- INICIO: Código añadido en Commit 1 ---
+// --- Código de Commit 1 ---
 @Composable
 fun ComponenteTextoSimple() {
     Text(
         text = "Este es el primer componente (Texto)",
-        fontSize = 20.sp, // Tamaño de texto de ejemplo
-        color = Color.Blue  // Color de ejemplo
+        fontSize = 20.sp,
+        color = Color.Blue
     )
 }
 
@@ -64,4 +69,23 @@ fun ComponenteTextoSimple() {
 fun PreviewComponenteTextoSimple() {
     ComponenteTextoSimple()
 }
-// --- FIN: Código añadido en Commit 1 ---
+// --- FIN Código de Commit 1 ---
+
+
+// --- INICIO: Código añadido en Commit 2 ---
+@Composable
+fun ComponenteIconoSimple() {
+    Icon(
+        imageVector = Icons.Default.Favorite, // Icono de corazón de ejemplo
+        contentDescription = "Icono de Favorito", // Descripción para accesibilidad
+        tint = Color.Red, // Color de ejemplo
+        modifier = Modifier.size(48.dp) // Tamaño de ejemplo
+    )
+}
+
+@Preview(showBackground = true, name = "Vista Previa Icono Simple")
+@Composable
+fun PreviewComponenteIconoSimple() {
+    ComponenteIconoSimple()
+}
+// --- FIN: Código añadido en Commit 2 ---

@@ -116,3 +116,7 @@ fun PreviewComponenteTarjetaSimple() {
     ComponenteTarjetaSimple()
 }
 // --- FIN: Código añadido en Commit 3 ---
+
+fun ComponenteTres(numero: Int): Int {
+    return numero + 5
+}

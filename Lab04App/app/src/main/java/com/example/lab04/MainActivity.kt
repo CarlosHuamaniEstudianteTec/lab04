@@ -120,3 +120,7 @@ fun PreviewComponenteTarjetaSimple() {
 fun ComponenteUno() {
     println("ESTE ES EL COMPONENTE UNO CON ESTILO.")
 }
+
+fun ComponenteTres(numero: Int): Int {
+    return numero + 5
+}

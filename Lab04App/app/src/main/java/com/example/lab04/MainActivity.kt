@@ -116,3 +116,7 @@ fun PreviewComponenteTarjetaSimple() {
     ComponenteTarjetaSimple()
 }
 // --- FIN: Código añadido en Commit 3 ---
+
+fun ComponenteUno() {
+    println("ESTE ES EL COMPONENTE UNO CON ESTILO.")
+}
